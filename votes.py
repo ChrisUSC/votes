@@ -57,11 +57,12 @@ states = {
     "Wyoming": 3
 }
 
-# Python3 program to prdistinct subset
+# Python3 program to return distinct subset
 # Sums of a given array.
 
 # Uses Dynamic Programming to find
 # distinct subset Sums
+#
 # adapted from: https://www.geeksforgeeks.org/find-distinct-subset-subsequence-sums-array/
 # This code is contributed
 # by mohit kumar
@@ -91,7 +92,7 @@ def getDistSum(arr, n):
                 dp[i][j] = True
                 dp[i][j + arr[i - 1]] = True
 
-    # Print last row elements
+    # Return the last row of elements
     result = []
     for j in range(Sum + 1):
         if (dp[n][j] == True):
